@@ -8,8 +8,9 @@ import { useTimer } from "react-timer-hook";
 const TimeSession = () => {
   const user = useSelector((state: RootState) => state.user);
   const [showPopup, setShowPopup] = useState(false);
-  const time = new Date();
-  time.setSeconds(time.getSeconds() + 50);
+  const expiryTimestamp = new Date();
+  expiryTimestamp.setSeconds(expiryTimestamp.getSeconds() + 50);
+
   const {
     totalSeconds,
     seconds,
@@ -22,10 +23,11 @@ const TimeSession = () => {
     resume,
     restart,
   } = useTimer({
-    time,
+    expiryTimestamp,
     autoStart: true,
     onExpire: () => setShowPopup(true),
   });
+
   return (
     <div style={{ textAlign: "center" }}>
       <div style={{ fontSize: "30px" }}>
