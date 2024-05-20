@@ -18,7 +18,6 @@ const TodoDetail = () => {
   const [todos, setTodos] = useState<any>();
   const [afterFilter, setAfterFilter] = useState<any>();
   const [select, setSeclect] = useState<string | any>("");
-  console.log(select, "sjdkj");
 
   useEffect(() => {
     if (select === "complete" && todos.length) {
@@ -47,7 +46,7 @@ const TodoDetail = () => {
     if (user.length) {
       getUser();
     }
-  }, []);
+  }, [user]);
   return (
     <div>
       {user.length ? (
@@ -93,7 +92,7 @@ const TodoDetail = () => {
                       <p className="">{i.title}</p>
 
                       {i.completed ? (
-                        <div className="bg-black/10 outline font-bold outline-green-400 bg-green-400 outline-1 p-1 h-6 w-6 rounded-full">
+                        <div className="bg-black/10 outline font-bold text-white outline-green-400 bg-green-400 outline-1 p-1 h-6 w-6 rounded-full">
                           <IoCheckmarkOutline className="" />
                         </div>
                       ) : (

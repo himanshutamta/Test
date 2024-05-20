@@ -35,7 +35,6 @@ const TimeSession = () => {
       <Button
         size="sm"
         onClick={() => {
-          // Restarts to 5 minutes timer
           const time = new Date();
           time.setSeconds(time.getSeconds() + 15);
           restart(time);
@@ -46,11 +45,10 @@ const TimeSession = () => {
       </Button>
       {showPopup && (
         <div className="bg-white p-2 rounded-xl">
-          Hey{user[0].name} it's time for a quick 5-second break.{" "}
+          Hey{user[0].name} it&apos;s time for a quick 5-second break.{" "}
           <button
-            className="bg-red-400  h-8 w-8 text-white hover:scale-95  rounded-full"
+            className="bg-red-700  h-8 w-8 text-white hover:scale-95  rounded-full"
             onClick={() => {
-              // Restarts to 5 minutes timer
               const time = new Date();
               time.setSeconds(time.getSeconds() + 15);
               restart(time);

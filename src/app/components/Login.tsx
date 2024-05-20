@@ -41,7 +41,7 @@ const Login = () => {
   0;
 
   return (
-    <div className="h-[100vh] w-[100%] flex justify-center items-center">
+    <div className="h-[100vh] w-[100%] flex justify-center items-center mx-3">
       <motion.div
         initial={{ scale: 0.7 }}
         animate={{ scale: 1 }}
