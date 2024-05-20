@@ -60,7 +60,7 @@ const Login = () => {
             defaultItems={users}
             className="max-w-xs"
             variant="bordered"
-            aria-label="Select an user"
+            placeholder="Select user"
             selectedKey={select}
             onSelectionChange={setSeclect}
           >
